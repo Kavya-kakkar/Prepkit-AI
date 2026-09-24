@@ -2,9 +2,16 @@ import { config } from 'dotenv';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
-// Load .env from the api package directory, regardless of where tsx is run from
-const __dirname = dirname(fileURLToPath(import.meta.url));
-config({ path: resolve(__dirname, '../.env') });
+// Only attempt local .env file load if running outside production serverless environments
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    const __dirname = dirname(fileURLToPath(import.meta.url));
+    config({ path: resolve(__dirname, '../.env') });
+  } catch {
+    // Ignore error in serverless runtimes where .env file is absent
+  }
+}
+
 import express from 'express';
 import { CORE_VERSION } from '@ai-prep/core';
 import { authRouter } from './routes/auth.js';
@@ -16,12 +23,28 @@ import { connectMongo, closeMongo } from './repositories/mongoConnection.js';
 import { MongoDb } from './repositories/mongoDb.js';
 import { setDb } from './repositories/db.js';
 
+// Lazy MongoDB connection wrapper for Vercel Serverless environment
+let isMongoConnected = false;
+async function ensureDbConnected() {
+  if (!isMongoConnected) {
+    try {
+      const mongoDbInstance = await connectMongo();
+      const mongoRepo = new MongoDb(mongoDbInstance);
+      await mongoRepo.ensureIndexes();
+      setDb(mongoRepo);
+      isMongoConnected = true;
+    } catch (err) {
+      console.error('[MongoDB Error] Lazy connection failed:', err);
+    }
+  }
+}
+
 export function createServer(): express.Express {
   const app = express();
 
   // Basic CORS middleware
   app.use((req, res, next) => {
-    const origin = req.headers.origin || 'http://localhost:3000';
+    const origin = req.headers.origin || '*';
     res.setHeader('Access-Control-Allow-Origin', origin);
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
@@ -36,9 +59,15 @@ export function createServer(): express.Express {
 
   app.use(express.json());
 
+  // Middleware to ensure DB connection before handling API routes in serverless mode
+  app.use(async (_req, _res, next) => {
+    await ensureDbConnected();
+    next();
+  });
+
   // Health endpoint
   app.get('/health', (_req, res) => {
-    res.json({ status: 'ok', coreVersion: CORE_VERSION });
+    res.json({ status: 'ok', coreVersion: CORE_VERSION, dbConnected: isMongoConnected });
   });
 
   // API Route Mounts
@@ -53,25 +82,18 @@ export function createServer(): express.Express {
   return app;
 }
 
-// ── Startup (only when run directly, not imported by tests) ────────────────
+const app = createServer();
+
+// ── Startup (only when run directly in local/traditional Node process) ─────
 const PORT = parseInt(process.env.PORT || '4000', 10);
 if (process.argv[1]?.endsWith('index.ts') || process.argv[1]?.endsWith('index.js')) {
   (async () => {
-    // 1. Connect to MongoDB and create indexes
-    const mongoDbInstance = await connectMongo();
-    const mongoRepo = new MongoDb(mongoDbInstance);
-    await mongoRepo.ensureIndexes();
+    await ensureDbConnected();
 
-    // 2. Register the live instance so all routes/services pick it up via the proxy
-    setDb(mongoRepo);
-
-    // 3. Start the HTTP server
-    const app = createServer();
     const server = app.listen(PORT, () => {
       console.log(`AI Interview Prep API server listening on http://localhost:${PORT}`);
     });
 
-    // 4. Graceful shutdown
     const shutdown = async (signal: string) => {
       console.log(`\n[${signal}] Shutting down gracefully…`);
       server.close(async () => {
@@ -87,3 +109,6 @@ if (process.argv[1]?.endsWith('index.ts') || process.argv[1]?.endsWith('index.js
     process.exit(1);
   });
 }
+
+// Export default app for Vercel Serverless Function Handler
+export default app;
