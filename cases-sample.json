@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-01-full-stack",
+    "jd": "Senior Full-Stack Engineer\nAcme Corp is seeking an experienced engineer.\nResponsibilities:\n- Build scalable web interfaces and backend services.\n- Design resilient APIs with PostgreSQL.\nRequirements:\n- 4+ years of TypeScript and React experience in production.\n- Proven track record with distributed Node.js microservices.\n- Excellent communication skills and teamwork.",
+    "company_url": "http://localhost:8099/acme/",
+    "days": 5
+  },
+  {
+    "id": "case-02-thin-jd",
+    "jd": "Lead DevOps Architect with Kubernetes experience.",
+    "company_url": "https://unreachable-domain-eval-test-404.org",
+    "days": 3
+  }
+]

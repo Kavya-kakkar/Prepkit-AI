@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-01-backend-lead",
+    "jd": "Senior Backend Systems Engineer\nAcme Corporation is looking for a senior backend engineer to join our core infrastructure team.\nResponsibilities:\n- Design, scale, and maintain high-throughput streaming systems in Node.js and TypeScript.\n- Ensure fault-tolerance and write comprehensive integration test suites.\nRequirements:\n- 5+ years of experience with distributed systems in production.\n- Deep understanding of database indexing, query optimization, and connection pooling.\n- Demonstrated ability to lead technical architecture discussions.",
+    "company_url": "http://localhost:8099/acme/",
+    "days": 5
+  },
+  {
+    "id": "case-02-frontend-architect",
+    "jd": "Staff Frontend Architect\nTechCorp is seeking a frontend architect to drive our design system.\nResponsibilities:\n- Architect accessible, high-performance web applications using React and Next.js.\n- Collaborate closely with product managers, UX designers, and platform engineers.\nRequirements:\n- 6+ years of modern JavaScript and TypeScript development.\n- Deep expertise in web performance optimization and Core Web Vitals.\n- Proven track record establishing architectural guidelines for engineering teams.",
+    "company_url": "https://example.com/careers",
+    "days": 3
+  },
+  {
+    "id": "case-03-thin-jd",
+    "jd": "Junior Full Stack Developer\nBasic knowledge of Python and JavaScript required.",
+    "company_url": "",
+    "days": 2
+  },
+  {
+    "id": "case-04-unreachable-site",
+    "jd": "Principal Data Engineer\nGlobal Data Systems seeks an experienced data pipeline engineer.\nResponsibilities:\n- Build real-time streaming architectures using Kafka and Spark.\nRequirements:\n- 5+ years building production ETL data pipelines.\n- Experience with columnar data stores and schema registries.",
+    "company_url": "https://unreachable-timeout-eval-404.nonexistent-tld",
+    "days": 4
+  },
+  {
+    "id": "case-05-devops-sre",
+    "jd": "Senior Site Reliability Engineer\nCloudScale seeks an SRE to manage our multi-region Kubernetes clusters.\nResponsibilities:\n- Manage Kubernetes clusters, Terraform infrastructure, and CI/CD pipelines.\n- Lead incident post-mortems and automate toil.\nRequirements:\n- 4+ years running high-availability cloud infrastructure on AWS or GCP.\n- Production experience with Kubernetes, Prometheus, and infrastructure-as-code.",
+    "company_url": "http://localhost:8099/cloudscale/",
+    "days": 7
+  }
+]

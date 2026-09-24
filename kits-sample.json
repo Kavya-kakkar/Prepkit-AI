@@ -1,0 +1,484 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-23T09:12:31.080Z",
+  "kits": [
+    {
+      "id": "case-01-full-stack",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1790154750410-uhzmt",
+        "version": 1,
+        "source": {
+          "company": "Localhost",
+          "company_url": "http://localhost:8099/acme/",
+          "role": "Senior Full-Stack Engineer",
+          "location": "Remote / Unspecified",
+          "jd_chars": 369,
+          "researched_at": "2026-09-23T09:12:30.410Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Localhost is an organization building modern software systems.",
+          "what_they_do": "Localhost develops platforms and tools focused on customer value and scalability.",
+          "sources": [],
+          "meta": {
+            "origin": "generated",
+            "edited": false,
+            "pinned": false,
+            "rev": 1
+          }
+        },
+        "role": {
+          "title": "Senior Full-Stack Engineer",
+          "seniority": "Senior",
+          "responsibilities": [
+            "Develop, test and deploy high-reliability software components for Company.",
+            "Collaborate across cross-functional product and engineering teams.",
+            "Participate in architecture reviews, code reviews, and technical design."
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Senior Full-Stack Engineer",
+              "kind": "technical",
+              "priority": "must",
+              "evidence": "Senior Full-Stack Engineer",
+              "meta": {
+                "origin": "generated",
+                "edited": false,
+                "pinned": false,
+                "rev": 1
+              }
+            },
+            {
+              "id": "r2",
+              "text": "Acme Corp is seeking an experienced engineer",
+              "kind": "technical",
+              "priority": "must",
+              "evidence": "Acme Corp is seeking an experienced engineer",
+              "meta": {
+                "origin": "generated",
+                "edited": false,
+                "pinned": false,
+                "rev": 1
+              }
+            },
+            {
+              "id": "r3",
+              "text": "Responsibilities:",
+              "kind": "behavioural",
+              "priority": "nice",
+              "evidence": "Responsibilities:",
+              "meta": {
+                "origin": "generated",
+                "edited": false,
+                "pinned": false,
+                "rev": 1
+              }
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "Describe your hands-on technical architecture experience regarding Generate a comprehensive bank of interview questions tailored to the specified requirements.",
+            "answer_outline": "Candidate should detail core technical patterns, edge cases, scalability considerations, and trade-offs.",
+            "difficulty": 2,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "system-design",
+            "prompt": "How would you architect a distributed, fault-tolerant system supporting Assign appropriate categories (technical, behavioural, system-design, company-fit) and difficulties (1: junior, 2: mid, 3: senior)?",
+            "answer_outline": "Candidate should break down components, data flow, API design, caching, failover, and metrics.",
+            "difficulty": 3,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you encountered a significant roadblock on a team project. How did you resolve it?",
+            "answer_outline": "STAR method: Situation, Task, Action, and measurable Result showcasing leadership and ownership.",
+            "difficulty": 1,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [],
+            "category": "company-fit",
+            "prompt": "Why are you interested in joining Localhost, and how do your professional values align with their mission?",
+            "answer_outline": "Demonstrates deep research into the company products, culture, engineering philosophy, and long-term vision.",
+            "difficulty": 2,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Core Principle: Generate flashcards for key technical concepts, behavioral models, and domain knowledge from the requirements",
+            "back": "Deep dive into fundamental algorithms, data access patterns, and failure modes.",
+            "requirement_ids": [
+              "r1"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "f2",
+            "front": "System Design: Scalability & Partitioning",
+            "back": "Horizontal scaling, consistent hashing, replication strategies, and CAP theorem trade-offs.",
+            "requirement_ids": [
+              "r2"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "f3",
+            "front": "Behavioral Framework: STAR Method",
+            "back": "Structure stories using Situation, Task, Action taken, and quantifiable Result.",
+            "requirement_ids": [
+              "r3"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          }
+        ],
+        "schedule": {
+          "days_available": 5,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core Technical Mastery & Priority Requirements",
+              "question_ids": [
+                "q2"
+              ],
+              "minutes": 60
+            },
+            {
+              "day": 2,
+              "focus": "System Design, Architecture & Behavioural Readiness",
+              "question_ids": [
+                "q1",
+                "q4"
+              ],
+              "minutes": 40
+            },
+            {
+              "day": 3,
+              "focus": "System Design, Architecture & Behavioural Readiness",
+              "question_ids": [
+                "q3"
+              ],
+              "minutes": 15
+            },
+            {
+              "day": 4,
+              "focus": "Reinforcement Review & High-Priority Retention",
+              "question_ids": [
+                "q2",
+                "q1"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 5,
+              "focus": "Final Light Run-Through & Interview Readiness",
+              "question_ids": [
+                "q2",
+                "q1"
+              ],
+              "minutes": 20
+            }
+          ],
+          "over_capacity_warning": false
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1,
+          "history": []
+        },
+        "warnings": [
+          "Company homepage unreachable: fetch failed",
+          "Company website (http://localhost:8099/acme/) was unreachable or timed out. Continuing with JD research."
+        ],
+        "research_trace": {
+          "fetched_urls": [],
+          "crawled_pages_count": 0,
+          "discussion_queries": [
+            "Localhost interview"
+          ],
+          "discussion_results_count": 5,
+          "warnings": [
+            "Company homepage unreachable: fetch failed",
+            "Company website (http://localhost:8099/acme/) was unreachable or timed out. Continuing with JD research."
+          ],
+          "unreachable_company": true
+        }
+      },
+      "error": null
+    },
+    {
+      "id": "case-02-thin-jd",
+      "status": "ok",
+      "kit": {
+        "id": "kit-1790154751079-l3bx3",
+        "version": 1,
+        "source": {
+          "company": "Unreachable-domain-eval-test-404",
+          "company_url": "https://unreachable-domain-eval-test-404.org",
+          "role": "Lead DevOps Architect with Kubernetes ex",
+          "location": "Remote / Unspecified",
+          "jd_chars": 49,
+          "researched_at": "2026-09-23T09:12:31.079Z",
+          "pages_used": []
+        },
+        "company_brief": {
+          "summary": "Unreachable-domain-eval-test-404 is an organization building modern software systems.",
+          "what_they_do": "Unreachable-domain-eval-test-404 develops platforms and tools focused on customer value and scalability.",
+          "sources": [],
+          "meta": {
+            "origin": "generated",
+            "edited": false,
+            "pinned": false,
+            "rev": 1
+          }
+        },
+        "role": {
+          "title": "Lead DevOps Architect with Kubernetes ex",
+          "seniority": "Mid-Level",
+          "responsibilities": [
+            "Develop, test and deploy high-reliability software components for Company.",
+            "Collaborate across cross-functional product and engineering teams.",
+            "Participate in architecture reviews, code reviews, and technical design."
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "Lead DevOps Architect with Kubernetes experience",
+              "kind": "technical",
+              "priority": "must",
+              "evidence": "Lead DevOps Architect with Kubernetes experience",
+              "meta": {
+                "origin": "generated",
+                "edited": false,
+                "pinned": false,
+                "rev": 1
+              }
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "Describe your hands-on technical architecture experience regarding Generate a comprehensive bank of interview questions tailored to the specified requirements.",
+            "answer_outline": "Candidate should detail core technical patterns, edge cases, scalability considerations, and trade-offs.",
+            "difficulty": 2,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "system-design",
+            "prompt": "How would you architect a distributed, fault-tolerant system supporting Assign appropriate categories (technical, behavioural, system-design, company-fit) and difficulties (1: junior, 2: mid, 3: senior)?",
+            "answer_outline": "Candidate should break down components, data flow, API design, caching, failover, and metrics.",
+            "difficulty": 3,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "behavioural",
+            "prompt": "Tell me about a time you encountered a significant roadblock on a team project. How did you resolve it?",
+            "answer_outline": "STAR method: Situation, Task, Action, and measurable Result showcasing leadership and ownership.",
+            "difficulty": 1,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [],
+            "category": "company-fit",
+            "prompt": "Why are you interested in joining Unreachable-domain-eval-test-404, and how do your professional values align with their mission?",
+            "answer_outline": "Demonstrates deep research into the company products, culture, engineering philosophy, and long-term vision.",
+            "difficulty": 2,
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Core Principle: Generate flashcards for key technical concepts, behavioral models, and domain knowledge from the requirements",
+            "back": "Deep dive into fundamental algorithms, data access patterns, and failure modes.",
+            "requirement_ids": [
+              "r1"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "f2",
+            "front": "System Design: Scalability & Partitioning",
+            "back": "Horizontal scaling, consistent hashing, replication strategies, and CAP theorem trade-offs.",
+            "requirement_ids": [
+              "r2"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          },
+          {
+            "id": "f3",
+            "front": "Behavioral Framework: STAR Method",
+            "back": "Structure stories using Situation, Task, Action taken, and quantifiable Result.",
+            "requirement_ids": [
+              "r3"
+            ],
+            "meta": {
+              "origin": "generated",
+              "edited": false,
+              "pinned": false,
+              "rev": 1
+            }
+          }
+        ],
+        "schedule": {
+          "days_available": 3,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Core Technical Mastery & Priority Requirements",
+              "question_ids": [
+                "q1",
+                "q2"
+              ],
+              "minutes": 85
+            },
+            {
+              "day": 2,
+              "focus": "System Design, Architecture & Behavioural Readiness",
+              "question_ids": [
+                "q4",
+                "q3"
+              ],
+              "minutes": 30
+            },
+            {
+              "day": 3,
+              "focus": "Final Light Run-Through & Interview Readiness",
+              "question_ids": [
+                "q1",
+                "q2"
+              ],
+              "minutes": 20
+            }
+          ],
+          "over_capacity_warning": false
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1,
+          "history": []
+        },
+        "warnings": [
+          "Thin job description provided; generated focused kit without hallucinating requirements.",
+          "Dropped 2 hallucinated requirements without verbatim evidence in JD.",
+          "Company homepage unreachable: SSRF Blocked: DNS resolution failed for unreachable-domain-eval-test-404.org",
+          "Company website (https://unreachable-domain-eval-test-404.org) was unreachable or timed out. Continuing with JD research."
+        ],
+        "research_trace": {
+          "fetched_urls": [],
+          "crawled_pages_count": 0,
+          "discussion_queries": [
+            "Unreachable-domain-eval-test-404 interview"
+          ],
+          "discussion_results_count": 0,
+          "warnings": [
+            "Thin job description provided; generated focused kit without hallucinating requirements.",
+            "Dropped 2 hallucinated requirements without verbatim evidence in JD.",
+            "Company homepage unreachable: SSRF Blocked: DNS resolution failed for unreachable-domain-eval-test-404.org",
+            "Company website (https://unreachable-domain-eval-test-404.org) was unreachable or timed out. Continuing with JD research."
+          ],
+          "unreachable_company": true
+        }
+      },
+      "error": null
+    }
+  ]
+}

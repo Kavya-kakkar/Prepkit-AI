@@ -1,0 +1,19 @@
+{
+  "name": "@ai-prep/api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@ai-prep/core": "*",
+    "dotenv": "^18.0.3",
+    "express": "^4.21.2",
+    "mongodb": "^7.6.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}

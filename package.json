@@ -1,0 +1,20 @@
+{
+  "name": "ai-interview-prep-kit-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --build tsconfig.json",
+    "evaluate": "tsx packages/cli/src/index.ts evaluate"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "fast-check": "^3.23.1",
+    "tsx": "^4.19.2"
+  }
+}

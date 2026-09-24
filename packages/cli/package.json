@@ -1,0 +1,12 @@
+{
+  "name": "@ai-prep/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@ai-prep/core": "*"
+  }
+}
